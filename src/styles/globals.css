@@ -2,26 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: #93b1a6;
+  background: #183d3d;
+  margin: 0 50px;
+}
+
+.scrollbar-hide {
+  scrollbar-width: thin; /* Firefox */
+  -ms-overflow-style: none; /* IE ve Edge */
+  overflow: -moz-scrollbars-none; /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  width: 0.1rem; /* Chrome ve Safari */
+  display: none; /* Chrome, Safari ve Opera için kaydırma çubuğunu gizle */
 }
