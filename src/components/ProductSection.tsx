@@ -223,10 +223,11 @@ const ProductSection: FC<ProductSectionProps> = ({
             className={cn(
               "bg-[#040D12] w-40 h-12 text-white rounded-md px-4 py-2 ",
               {
-                "cursor-not-allowed opacity-30": quantity >= 120 ? false : true,
+                "cursor-not-allowed opacity-30":
+                  quantity >= 120 ? false : true || !selectedBody,
               }
             )}
-            disabled={quantity >= 120 ? false : true}
+            disabled={quantity >= 120 ? false : true || !selectedBody}
             onClick={addBasket}
           >
             Sepete Ekle
